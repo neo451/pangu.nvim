@@ -11,7 +11,7 @@ local function get_token_type(token)
 	if ut.is_punctuation(token) then
 		return TokenType.punc
 	end
-	if ut.isChineseCharacter(token) then
+	if ut.is_chinese(token) then
 		return TokenType.hans
 	end
 	if string.match(token, "[a-zA-Z0-9]") then
