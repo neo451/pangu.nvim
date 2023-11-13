@@ -61,7 +61,7 @@ local spacing = function(sentence)
 end
 
 vim.api.nvim_create_autocmd({ "BufWritePost" },
-  { pattern = "*.md",
+  { pattern = {"*.md", "*.norg"},
   callback = function()
     local lines = vim.api.nvim_buf_get_lines(0, 0, -1, true)
     local tab = {}
